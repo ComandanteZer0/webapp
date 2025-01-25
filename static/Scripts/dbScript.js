@@ -6,6 +6,10 @@
 // tg.initDataUnsafe.user.last_name // "фамилия" пользователя
 // tg.initDataUnsafe.user.username // username пользователя
 // tg.initDataUnsafe.user.language_code // код языка пользователя
-let tg = window.Telegram.WebApp;
+
+
+
+console.log(userId)
+let tg = window.Telegram.WebApp.ready();
 document.getElementById('idBox').innerHTML = Telegram.WebApp.initDataUnsafe.userId;;
 document.write(Telegram.WebApp.initDataUnsafe.userId);
