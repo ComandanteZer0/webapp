@@ -1,61 +1,19 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+  <head>
+    <meta charset="UTF-8" />
+    <title>НейМаркет</title>
+    <meta name="description" content="Описание страницы" />
+    <link rel="stylesheet" href="./css/accesPage.css" />
+  </head>
 
-        body {
-            color: var(--tg-theme-text-color);
-            background: var(--tg-theme-bg-color);
-        }
+  <body>
 
-        .Main {
-            width: 100%;
-            padding: 25px;
-            text-align: center;
+    <h1 id="Main_acces_label">НейМаркет</h1>
+    <h1 id="user_id">ID: 111111</h1>
+    <img id="mainname" src="./assets/images/pautinka.png" alt="NO" />
 
-        }
-
-        h1 {
-            margin-top: 40px;
-            margin-bottom: 10px;
-        }
-
-        img {
-            width: 70px;
-            margin: 30px auto;
-        }
-
-        .btn {
-            border: 0;
-            border-radius: 5px;
-            margin-top: 50px;
-            height: 60px;
-            width: 200px;
-            font-style: 20px;
-            font-weight: 500;
-            cursor: pointer;
-            color: var(--tg-theme-button-text-color);
-            background: var(--tg-theme-button-color);
-        }
-        
-    </style>
-</head>
-<body>
-    <div class="Main">
-        <h1>Тестовое приложение</h1>
-        <img src="{{ url_for('static', filename='bot.png') }}" alt="123">
-        <p></p>
-        <button class="btn">Кнопка</button>
-    </div>
-    <script src="{{ url_for('static',filename='js/jquery-3.3.1.min.js') }}"></script>
-    <script src="https://telegram.org/js/telegram-web-app.js"></script>
-</body>
+  </body>
+  <script src="{{ url_for('static',filename='js/jquery-3.3.1.min.js') }}"></script>
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
 </html>

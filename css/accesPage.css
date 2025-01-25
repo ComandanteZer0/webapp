@@ -1,0 +1,32 @@
+@font-face {
+    font-family: "Gramatika";
+    font-style: normal;
+    font-weight: 400;
+    src: local("Gramatika"),
+         url("assets/fonts/gramatika_regular.ttf") format("ttf");
+  }
+  @font-face {
+    font-family: "Gramatika-Bold";
+    font-style: bold;
+    font-weight: 400;
+    src: url("assets/fonts/gramatika_bold.ttf") format("ttf");
+  }
+#Main_acces_label {
+    text-align: center;
+    color:aliceblue;
+    font-family: "Gramatika-Bold", "Arial", sans-serif;
+}
+#user_id{
+    text-align: center;
+    color: aliceblue;
+    font-family: "Gramatika", "Arial", sans-serif;
+}
+body{
+    background-color: #1D1D1B;
+    background-repeat: no-repeat;
+    color: white;
+    height: 100vh;
+    background-image: url("./assets/images/pautinka.png");
+
+    margin-bottom: 6px;
+}
