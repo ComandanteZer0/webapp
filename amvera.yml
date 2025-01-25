@@ -10,4 +10,4 @@ build:
 run:
   persistenceMount: /data
   containerPort: 80
-  command: python main.py
+  scriptName: main.py
