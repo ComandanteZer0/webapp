@@ -5,6 +5,7 @@ import asyncio
 #=======my==================================================
 from sql import Database
 import os
+import config
 bot = Bot(token='8118444300:AAFwpBXmS1Rwn7sEqBSS92C86TYEchTGtAs', parse_mode=types.ParseMode.HTML)
 storage = MemoryStorage()
 dp = Dispatcher(bot, storage=storage)
@@ -19,7 +20,7 @@ async def bot_start(message: types.Message):
         ikb_donate = InlineKeyboardMarkup(row_width=1,
                                 inline_keyboard=[
                                     [
-                                        InlineKeyboardButton(text='Перейти в магазин', web_app=WebAppInfo(url=f'https://miniapp-goshasn.amvera.io/'))
+                                        InlineKeyboardButton(text='Перейти в магазин', web_app=WebAppInfo(url=config.main_link))
                                     ]
                                 ])
         await bot.send_message(message.from_user.id, 
@@ -29,7 +30,6 @@ async def set_default_commands(dp):
     await dp.bot.set_my_commands(
         [
             types.BotCommand("start", "Запустить бота"),
-            types.BotCommand("open", "Открыть сайт"),
         ]
     )
 async def on_startup(dispatcher):
