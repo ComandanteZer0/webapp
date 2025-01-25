@@ -14,11 +14,7 @@
 .MainAcceslLabel{
   text-align: center;
 }
-.backImg{
-  text-align: center;
-  background-image: ("{{ ='../images/pautinka.png')}}");
-  
-}
+
 .notif{
   text-align: center;
   color: grey;
@@ -35,7 +31,6 @@
 
 body {
   background-color: #1d1d1b;
-  background-repeat: no-repeat;
   color: white;
-  /* background-image: url("{{ url_for( 'static', filename='/images/pautinka.png')}}"); */
+  background-image:"images/фон.png";
 }
