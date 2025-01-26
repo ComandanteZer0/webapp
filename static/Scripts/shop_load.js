@@ -67,5 +67,17 @@ tg.MainButton.setText("Changed Text1"); //изменяем текст кнопк
 tg.MainButton.textColor = "#F55353"; //изменяем цвет текста кнопки
 tg.MainButton.color = "#143F6B"; //изменяем цвет бэкграунда кнопки
 tg.MainButton.setParams({ color: "#143F6B" }); //так изменяются все параметры
+
+tg.sendData("some string that we need to send");
+
+let profName = document.createElement("p"); 
+profName.innerText = `${tg.initDataUnsafe.user.first_name}
+   ${tg.initDataUnsafe.user.last_name}
+   ${tg.initDataUnsafe.user.username} (${tg.initDataUnsafe.user.language_code})`;
+usercard.appendChild(profName); //добавляем
+
+let userid = document.createElement("p"); //создаем еще параграф
 var text = `${tg.initDataUnsafe.user.id}`;
+userid.innerText =  text; //показываем user_id
 console.log(text)
+usercard.appendChild(userid); //добавляем
