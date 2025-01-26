@@ -13,7 +13,7 @@ function load_data() {
         name.textContent = data[index][4];
         id.textContent = "ID: " + data[index][0];
         amount.textContent = "Осталось: " + data[index][2] + " шт.";
-        price.textContent = "Цена: "+data[index][1]+" шт."
+        price.textContent = "Цена: "+data[index][1]+" НейКоинов"
         img.src = "/static/img/" + data[index][3];
         img.alt = "Описание картинки";
         div.className += "plinkImages";
@@ -35,11 +35,12 @@ function load_data() {
     })
     .catch((error) => console.error("Error:", error));
 }
+const tg = window.Telegram.WebApp.ready();
+const sr = Telegram.WebApp.initDataUnsafe.userId;
+console.log(sr)
 window.onload = function () {
   let w = load_data();
-  const tg = window.Telegram.WebApp.ready();
-  const sr = Telegram.WebApp.initDataUnsafe.userId;
-  console.log(sr)
+
   const userId = tg.initData;
   let replace = document.querySelector("#profileButton");
   var href = replace.getAttribute("href");
