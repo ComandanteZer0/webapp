@@ -28,34 +28,31 @@
     data-lang="ru"
   >
     <header class="u-clearfix u-custom-color-9 u-header u-header" id="sec-eb85">
-      <div
-        class="top"
-      >
       <div  class = "right-top-menu">
-        <a  href="/profile">
-          <img src="{{ url_for('static', filename='img/profile.png') }}" width="40" height="40" width="600">
-        </a>
-      </div>
-        <div class="money">
 
+          <a class="BOX" href="/profile">
+            <img src="{{ url_for('static', filename='img/profile.png') }}" width="70" height="70" width="600">
+          </a>
           <img
-          width="25" 
-          height="25"
-            class="coin"
-            src="{{ url_for('static', filename='img/коин2.png') }}"
+            class="BOX"
+            src="{{ url_for('static', filename='img/bold.png') }}"
             alt=""
             data-image-width="345"
             data-image-height="59"
           />
-          <b class="balance">: 0</b>
-        </div>
-        <img
-          class="u-image u-image-default u-image-1"
-          src="{{ url_for('static', filename='img/bold.png') }}"
-          alt=""
-          data-image-width="345"
-          data-image-height="59"
-        />
+          <div id = "money">
+            <img class="BOX balance"
+            width="25" 
+            height="25"
+              src="{{ url_for('static', filename='img/коин2.png') }}"
+              alt=""
+              data-image-width="345"
+              data-image-height="59"
+            />
+            <b class="balance">: 0</b>
+          </div>
+
+      
       </div>
     </header>
     <section id="sec-7dc5">
