@@ -13,10 +13,16 @@ class Database:
 		with self.connection:
 			result = self.cursor.execute("SELECT * FROM user_data WHERE user_id = ?", (user_id,)).fetchmany(1)
 			return bool(len(result))
+	def checkRules(self, user_id):
+		with self.connection:
+			result = self.cursor.execute("SELECT rules FROM user_data WHERE user_id = ?", (user_id,)).fetchmany(1)
+			return bool(result[0][0])
 	def get_users(self):
 		with self.connection:
 			return self.cursor.execute('SELECT user_id FROM "user_data"').fetchall()
-
+	def set_rules(self,status,user_id):
+		with self.connection:
+			return self.cursor.execute("UPDATE user_data SET rules = ? WHERE user_id = ?", (status,user_id))
 
 def getShop():
 	connection = sqlite3.connect(config.name)
@@ -25,4 +31,5 @@ def getShop():
 		resp = cursor.execute('SELECT * FROM "shop_data"').fetchall()
 		cursor.close()
 		return resp
+	
 		

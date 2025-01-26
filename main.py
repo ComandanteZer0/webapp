@@ -5,7 +5,7 @@ app = Flask(__name__, template_folder='.')
 
 @app.route("/shop.html")
 def shop():
-   
+
 
    return render_template('assets/shop/shop.html')
 

@@ -7,7 +7,7 @@
   
 }
 body{
-  background-image: url("../img/фон.png");
+  background-image: url("../img/фон3.png");
   size: 100%;
 }
 @font-face {
@@ -20,6 +20,7 @@ body{
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
+  max-width: 100%;
 
   
 }
@@ -38,9 +39,22 @@ body{
   font-family: 'Grammatic',"","";
   color:aliceblue;
   text-align: center;
-  
-  
-  
+}
+.balance{
+  color: aliceblue;
+  font-family: 'Grammatic',"","";
+
+}
+
+.money{
+  position: absolute;
+  top: 4vh;
+  left: 5vh;
+}
+.right-top-menu{
+  position: absolute;
+  top: 4vh;
+  left: 95vh;
 }
 .plinkImages{
   background-color: lightgrey;

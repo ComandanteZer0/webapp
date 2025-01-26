@@ -8,6 +8,7 @@
 *{
     text-align: center;
 }
+
 .discription_lowest{
     height: 40vh;
     background-color: rgba(11,11,10, 0.5);
@@ -18,7 +19,7 @@
     
 }
 body{
-    background-image: url("../img/фон.png");
+    background-image: url("../img/фон3.png");
 }
 
 
@@ -26,7 +27,6 @@ body{
     text-align: center;
 }
 .secondImage{
-
     size: 70%;
 }
 .description-text{

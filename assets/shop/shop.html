@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
-    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, maximum-scale=1.0">
+    <meta
+      name="viewport"
+      content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, maximum-scale=1.0"
+    />
     <meta charset="utf-8" />
     <meta name="keywords" content="" />
     <meta name="description" content="" />
     <title>товары</title>
-
     <link
       rel="stylesheet"
       href="{{ url_for('static', filename='css/shop.css') }}"
@@ -27,8 +29,26 @@
   >
     <header class="u-clearfix u-custom-color-9 u-header u-header" id="sec-eb85">
       <div
-        class="u-clearfix u-sheet u-valign-middle-lg u-valign-middle-md u-valign-middle-sm u-valign-middle-xl u-sheet-1"
+        class="top"
       >
+      <div  class = "right-top-menu">
+        <a  href="/profile">
+          <img src="{{ url_for('static', filename='img/profile.png') }}" width="40" height="40" width="600">
+        </a>
+      </div>
+        <div class="money">
+
+          <img
+          width="25" 
+          height="25"
+            class="coin"
+            src="{{ url_for('static', filename='img/коин2.png') }}"
+            alt=""
+            data-image-width="345"
+            data-image-height="59"
+          />
+          <b class="balance">: 0</b>
+        </div>
         <img
           class="u-image u-image-default u-image-1"
           src="{{ url_for('static', filename='img/bold.png') }}"
