@@ -8,6 +8,7 @@
 }
 body{
   background-image: url("../img/фон.png");
+  size: 100%;
 }
 @font-face {
   font-family: "Grammatic";
