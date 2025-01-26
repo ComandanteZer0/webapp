@@ -27,34 +27,35 @@
     class="u-body u-xl-mode"
     data-lang="ru"
   >
-    <header class="u-clearfix u-custom-color-9 u-header u-header" id="sec-eb85">
-      <div  class = "right-top-menu">
-
-          <a class="BOX" href="/profile">
-            <img src="{{ url_for('static', filename='img/profile.png') }}" width="70" height="70" width="600">
-          </a>
-          <img
-            class="BOX"
-            src="{{ url_for('static', filename='img/bold.png') }}"
-            alt=""
-            data-image-width="345"
-            data-image-height="59"
-          />
-          <div id = "money">
-            <img class="BOX balance"
-            width="25" 
-            height="25"
-              src="{{ url_for('static', filename='img/коин2.png') }}"
-              alt=""
-              data-image-width="345"
-              data-image-height="59"
-            />
-            <b class="balance" id ="balancebox">: 0</b>
-          </div>
-
-      
+    <div class="right-top-menu">
+      <a class="BOX" id = "profileButton" href="./profile/">
+        <img
+          src="{{ url_for('static', filename='img/profile.png') }}"
+          width="70"
+          height="70"
+          width="600"
+        />
+      </a>
+      <img
+        class="BOX"
+        src="{{ url_for('static', filename='img/bold.png') }}"
+        alt=""
+        data-image-width="345"
+        data-image-height="59"
+      />
+      <div id="money">
+        <img
+          class="BOX balance"
+          width="25"
+          height="25"
+          src="{{ url_for('static', filename='img/коин2.png') }}"
+          alt=""
+          data-image-width="345"
+          data-image-height="59"
+        />
+        <b class="balance" id="balancebox">: 0</b>
       </div>
-    </header>
+    </div>
     <section id="sec-7dc5">
       <div class="menu" id="divContainer"></div>
     </section>

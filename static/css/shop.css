@@ -1,6 +1,5 @@
 
 * {
-  
   font-family: Arial;
   text-decoration: none;
   font-size: 20px;
@@ -21,8 +20,6 @@ body{
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
   max-width: 100%;
-
-  
 }
 .menu div{
   background-color: rgba(0, 78, 168, 0.54);
@@ -32,10 +29,10 @@ body{
   margin-right: 1vh;
   size: 10%;
   border-radius: 10%;
-  
 }
 .ImgTextBoxes{
   font-size: 3vh;
+  margin: 0;
   font-family: 'Grammatic',"","";
   color:aliceblue;
   text-align: center;

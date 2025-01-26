@@ -31,5 +31,12 @@ def getShop():
 		resp = cursor.execute('SELECT * FROM "shop_data"').fetchall()
 		cursor.close()
 		return resp
+def getUserData(user_id):
+	connection = sqlite3.connect(config.name)
+	cursor = connection.cursor()
+	with connection:
+		resp = cursor.execute("SELECT * FROM user_data WHERE user_id = ?", (user_id,)).fetchmany(1)
+		cursor.close()
+		return resp[0]
 	
 		
