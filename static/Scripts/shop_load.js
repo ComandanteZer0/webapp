@@ -41,6 +41,8 @@ window.onload = function () {
   const userId = Telegram.WebApp.initDataUnsafe.userId;
   let replace = document.querySelector("#profileButton");
   var href = replace.getAttribute("href");
+  console.log(userId)
+  alert(userId)
   replace.href =("./profile/" + toString(userId)); 
 };
 function process(selectedItem) {
