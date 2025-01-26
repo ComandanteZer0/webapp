@@ -4,8 +4,18 @@
     font-size: 12vh;
     /* src: "{{ url_for('static', filename='/fonts/gramatika_bold.ttf') }}"; */
   }
+
 *{
     text-align: center;
+}
+.discription_lowest{
+    height: 40vh;
+    background-color: rgba(11,11,10, 0.5);
+    margin-left: 0;
+    margin-right: 0;
+    padding: 0;
+    border-radius:0;
+    
 }
 body{
     background-image: url("../img/фон.png");
