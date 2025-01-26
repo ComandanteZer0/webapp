@@ -37,8 +37,8 @@ function load_data() {
 }
 window.onload = function () {
   let w = load_data();
-  
-  const userId = Telegram.WebApp.initDataUnsafe.user.userId;
+  let tg = window.Telegram.WebApp;
+  const userId = tg.initDataUnsafe.user.userId;
   let replace = document.querySelector("#profileButton");
   var href = replace.getAttribute("href");
   console.log(userId)
