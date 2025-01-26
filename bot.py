@@ -11,6 +11,13 @@ storage = MemoryStorage()
 dp = Dispatcher(bot, storage=storage)
 db = Database("bd.db")
 from aiogram.types import InlineKeyboardButton,InlineKeyboardMarkup, WebAppInfo,BotCommand
+def webAppKeyboardInline(): 
+   keyboard = types.InlineKeyboardMarkup(row_width=1)
+   webApp = types.WebAppInfo(config.main_link) 
+   one = types.InlineKeyboardButton(text="Веб приложение", web_app=webApp) 
+   keyboard.add(one) 
+
+   return keyboard 
 @dp.message_handler(commands=['start','open'])
 async def bot_start(message: types.Message):
     if message.chat.type == 'private':
@@ -18,13 +25,8 @@ async def bot_start(message: types.Message):
             await bot.delete_message(message.chat.id, message.message_id) 
             if not db.user_exists( message.from_user.id):
                 db.add_user(message.from_user.id)
-            ikb_donate = InlineKeyboardMarkup(row_width=1,
-                                    inline_keyboard=[
-                                        [
-                                            InlineKeyboardButton(text='Перейти в магазин', web_app=WebAppInfo(url=config.main_link))
-                                        ]
-                                    ])
-            await bot.send_message(message.from_user.id, config.helloText,reply_markup=ikb_donate)
+            
+            await bot.send_message(message.from_user.id, config.helloText,reply_markup=webAppKeyboardInline)
         else:
             confirm = InlineKeyboardMarkup(row_width=1,
                                     inline_keyboard=[
@@ -53,15 +55,16 @@ async def Status_change(call: types.CallbackQuery):
         await call.message.delete()
     except:
         pass
-    ikb_donate = InlineKeyboardMarkup(row_width=1,
-                                    inline_keyboard=[
-                                        [
-                                            InlineKeyboardButton(text='Перейти в магазин', web_app=WebAppInfo(url=config.main_link))
-                                        ]
-                                    ])
+
     
     await bot.send_message(call.message.chat.id, config.helloText, 
-                    reply_markup = ikb_donate)
+                    reply_markup = webAppKeyboardInline)
+@bot.message_handler(content_types="web_app_data") 
+def answer(webAppMes):
+   print(webAppMes) 
+   print(webAppMes.web_app_data.data) 
+   bot.send_message(webAppMes.chat.id, f"получили инофрмацию из веб-приложения: {webAppMes.web_app_data.data}") 
+   
 if __name__ == '__main__':
     loop = asyncio.new_event_loop()
     asyncio.set_event_loop(loop)

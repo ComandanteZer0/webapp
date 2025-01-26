@@ -13,7 +13,7 @@ function load_data() {
         name.textContent = data[index][4];
         id.textContent = "ID: " + data[index][0];
         amount.textContent = "Осталось: " + data[index][2] + " шт.";
-        price.textContent = "Цена: "+data[index][1]+" НейКоинов"
+        price.textContent = "Цена: " + data[index][1] + " НейКоинов";
         img.src = "/static/img/" + data[index][3];
         img.alt = "Описание картинки";
         div.className += "plinkImages";
@@ -38,14 +38,11 @@ function load_data() {
 
 window.onload = function () {
   let w = load_data();
-
-  var search = Telegram.WebApp.initData
-  var converted = JSON.parse('{"' + search.replace(/&/g, '","').replace(/=/g,'":"') + '"}', function(key, value) { return key===""?value:decodeURIComponent(value) })
-  JSON.parse(converted.user)
-  let replace = document.querySelector("#profileButton");
-  var href = replace.getAttribute("href");
-  console.log(converted);
-  replace.href =("./profile/" + converted); 
+  // converted = '603006669';
+  // let replace = document.querySelector("#profileButton");
+  // var href = replace.getAttribute("href");
+  // console.log(converted);
+  // replace.href =("./profile/" + '603006669');
 };
 function process(selectedItem) {
   const data = JSON.stringify({
@@ -61,3 +58,12 @@ function process(selectedItem) {
     },
   });
 }
+let tg = window.Telegram.WebApp; //получаем объект webapp телеграма
+tg.expand(); //расширяем на все окно
+tg.MainButton.text = "Changed Text"; //изменяем текст кнопки
+tg.MainButton.setText("Changed Text1"); //изменяем текст кнопки иначе
+tg.MainButton.textColor = "#F55353"; //изменяем цвет текста кнопки
+tg.MainButton.color = "#143F6B"; //изменяем цвет бэкграунда кнопки
+tg.MainButton.setParams({ color: "#143F6B" }); //так изменяются все параметры
+tg.sendData(tg.initDataUnsafe.user.id);
+
