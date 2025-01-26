@@ -12,11 +12,11 @@ dp = Dispatcher(bot, storage=storage)
 db = Database("bd.db")
 from aiogram.types import InlineKeyboardButton,InlineKeyboardMarkup, WebAppInfo,BotCommand
 def webAppKeyboardInline(): 
-   keyboard = types.InlineKeyboardMarkup(row_width=1)
-   webApp = types.WebAppInfo(config.main_link) 
-   one = types.InlineKeyboardButton(text="Веб приложение", web_app=webApp) 
+   keyboard = InlineKeyboardMarkup(row_width=1)
+   webApp = WebAppInfo(url = config.main_link) 
+   one = InlineKeyboardButton(text="Веб приложение", web_app=webApp) 
    keyboard.add(one) 
-
+   
    return keyboard 
 @dp.message_handler(commands=['start','open'])
 async def bot_start(message: types.Message):
@@ -26,7 +26,8 @@ async def bot_start(message: types.Message):
             if not db.user_exists( message.from_user.id):
                 db.add_user(message.from_user.id)
             
-            await bot.send_message(message.from_user.id, config.helloText,reply_markup=webAppKeyboardInline)
+            await bot.send_message(message.from_user.id, config.helloText,
+                                   reply_markup=webAppKeyboardInline())
         else:
             confirm = InlineKeyboardMarkup(row_width=1,
                                     inline_keyboard=[
@@ -58,12 +59,12 @@ async def Status_change(call: types.CallbackQuery):
 
     
     await bot.send_message(call.message.chat.id, config.helloText, 
-                    reply_markup = webAppKeyboardInline)
-@bot.message_handler(content_types="web_app_data") 
-def answer(webAppMes):
+                    reply_markup = webAppKeyboardInline())
+@dp.message_handler(content_types="web_app_data") 
+async def answer(webAppMes):
    print(webAppMes) 
    print(webAppMes.web_app_data.data) 
-   bot.send_message(webAppMes.chat.id, f"получили инофрмацию из веб-приложения: {webAppMes.web_app_data.data}") 
+   await bot.send_message(webAppMes.chat.id, f"получили инофрмацию из веб-приложения: {webAppMes.web_app_data.data}") 
    
 if __name__ == '__main__':
     loop = asyncio.new_event_loop()
