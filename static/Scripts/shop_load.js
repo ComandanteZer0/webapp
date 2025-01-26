@@ -24,7 +24,7 @@ function load_data() {
         
         container.appendChild(div);
       }
-      return data;
+      
     })
     .catch((error) => console.error("Error:", error));
 }
