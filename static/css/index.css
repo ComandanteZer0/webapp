@@ -1,3 +1,58 @@
+
+* {
+  text-align: center;
+  font-family: Arial;
+  text-decoration: none;
+  font-size: 20px;
+  
+}
+body{
+  background-image: url("../img/фон.png");
+}
+@font-face {
+  font-family: "Grammatic";
+  src :url("../fonts/gramatika_regular.ttf");
+  font-size: 12vh;
+  /* src: "{{ url_for('static', filename='/fonts/gramatika_bold.ttf') }}"; */
+}
+.menu {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  size : 40%;
+  
+}
+.menu div{
+  background-color: rgba(0, 78, 168, 0.54);
+  display: inline-block;
+  margin-top: 2vh;
+  margin-left: 1vh;
+  margin-right: 1vh;
+  size: 10%;
+  border-radius: 10%;
+  
+}
+.ImgTextBoxes{
+  font-size: 3vh;
+  font-family: 'Grammatic',"","";
+  color:aliceblue;
+  text-align: center;
+  
+  
+  
+}
+.plinkImages{
+  background-color: lightgrey;
+
+}
+.menu div img {
+  max-width: 100%;
+  display: block;
+
+  border-radius: 10%;
+}
+
+
 .ButtonBuyBox {
   display: inline-block;
   padding: 0.75rem 1.25rem;
@@ -19,7 +74,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #0cf;
+  background-color: #004EA8;
   border-radius: 10rem;
   z-index: -2;
 }
@@ -43,187 +98,3 @@
 }
 
 /* optional reset for presentation */
-* {
-  font-family: Arial;
-  text-decoration: none;
-  font-size: 20px;
-}
-
-
-.menu {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-  size : 40%;
-  
-}
-@font-face {
-  font-family: "Grammatic";
-  src :url("../fonts/gramatika_regular.ttf");
-  font-size: 12vh;
-  /* src: "{{ url_for('static', filename='/fonts/gramatika_bold.ttf') }}"; */
-}
-.ButtonBuyBox{
-
-}
-.ImgTextBoxes{
-  font-size: 12vh;
-  font-family: 'Grammatic',"","";
-  color: '1D1D1B';
-  text-align: center;
-  
-  
-}
-.plinkImages{
-  background-color: lightgrey;
-}
-.menu div img {
-  max-width: 100%;
-  display: block;
-}
-
-.menu div{
-  background-color: "#1D1D1B";
-  display: inline-block;
-  border: 10px solid lightgray;
-  size: 10%
-}
-.u-section-1 .u-sheet-1 {
-  min-height: 1925px;
-}
-
-.u-section-1 .u-image-1 {
-  --radius: 10px;
-  width: 225px;
-  height: 300px;
-  margin: 40px auto 0 63px;
-}
-
-.u-section-1 .u-image-2 {
-  --radius: 10px;
-  width: 225px;
-  height: 300px;
-  margin: 360px auto 0 63px;
-}
-
-.u -section-1 .u-image-3 {
-  width: 300px;
-  height: 300px;
-  margin: 535px auto 0 178px;
-}
-
-.u-section-1 .u-image-4 {
-  --radius: 10px;
-  width: 225px;
-  height: 300px;
-  margin: -1465px auto 0 63px;
-}
-
-.u-section-1 .u-image-5 {
-  --radius: 10px;
-  width: 225px;
-  height: 300px;
-  margin: 360px auto 0 63px;
-}
-
-.u-section-1 .u-text-1 {
-  font-family: "Open Sans", sans-serif;
-  margin: 30px auto 0 63px;
-}
-
-.u-section-1 .u-text-2 {
-  font-family: "Open Sans", sans-serif;
-  margin: 20px auto 0 63px;
-}
-
-.u-section-1 .u-text-3 {
-  font-family: "Open Sans", sans-serif;
-  margin: 20px auto 0 63px;
-}
-
-.u-section-1 .u-text-4 {
-  font-family: "Open Sans", sans-serif;
-  margin: 20px auto 0 63px;
-}
-
-@media (max-width: 767px) {
-  .u-section-1 .u-image-3 {
-    margin-top: 523px;
-  }
-
-  .u-section-1 .u-image-4 {
-    margin-top: -1453px;
-  }
-}
-
-@media (max-width: 575px) {
-  .u-section-1 .u-sheet-1 {
-    min-height: 571px;
-  }
-
-  .u-section-1 .u-image-1 {
-    width: 130px;
-    height: 174px;
-    margin-top: 11px;
-    margin-left: 16px;
-  }
-
-  .u-section-1 .u-image-2 {
-    width: 130px;
-    height: 174px;
-    margin-top: 35px;
-    margin-left: 16px;
-  }
-
-  .u-section-1 .u-image-3 {
-    width: 914px;
-    height: 626px;
-    margin-top: -300px;
-    margin-left: -146px;
-  }
-
-  .u-section-1 .u-image-4 {
-    width: 130px;
-    height: 174px;
-    margin-top: -709px;
-    margin-right: 0;
-    margin-left: auto;
-  }
-
-  .u-section-1 .u-image-5 {
-    width: 130px;
-    height: 174px;
-    margin-top: 35px;
-    margin-right: 0;
-    margin-left: auto;
-  }
-
-  .u-section-1 .u-text-1 {
-    width: auto;
-    font-family: gramatika_regular;
-    margin-top: -209px;
-    margin-left: 17px;
-  }
-
-  .u-section-1 .u-text-2 {
-    width: auto;
-    font-family: gramatika_regular;
-    margin-top: -26px;
-    margin-right: -18px;
-    margin-left: auto;
-  }
-
-  .u-section-1 .u-text-3 {
-    width: auto;
-    font-family: gramatika_regular;
-    margin-top: 183px;
-    margin-right: -10px;
-    margin-left: auto;
-  }
-
-  .u-section-1 .u-text-4 {
-    width: auto;
-    font-family: gramatika_regular;
-    margin: -25px 204px 60px 26px;
-  }
-}

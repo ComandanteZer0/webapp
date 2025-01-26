@@ -1,0 +1,72 @@
+@font-face {
+    font-family: "Grammatic-regular";
+    src :url("../fonts/gramatika_regular.ttf");
+    font-size: 12vh;
+    /* src: "{{ url_for('static', filename='/fonts/gramatika_bold.ttf') }}"; */
+  }
+*{
+    text-align: center;
+}
+body{
+    background-image: url("../img/фон.png");
+}
+
+
+.mainDiv{
+    text-align: center;
+}
+.secondImage{
+
+    size: 70%;
+}
+.description-text{
+    color: whitesmoke;
+    text-align: center;
+    font-family: "Grammatic-regular","","";
+}
+.ShopForm{
+    text-align: center;
+}
+.ButtonShopBox {
+    display: inline-block;
+    padding: 0.75rem 1.25rem;
+    border-radius: 10rem;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1rem;
+    letter-spacing: 0.15rem;
+    transition: all 0.3s;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    text-align: center;
+  }
+  .ButtonShopBox:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #004EA8;
+    border-radius: 10rem;
+    z-index: -2;
+  }
+  .ButtonShopBox:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background-color: #008fb3;
+    transition: all 0.3s;
+    border-radius: 10rem;
+    z-index: -1;
+  }
+  .ButtonShopBox:hover {
+    color: #fff;
+  }
+  .ButtonShopBox:hover:before {
+    width: 100%;
+  }

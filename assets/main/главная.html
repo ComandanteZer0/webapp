@@ -11,100 +11,11 @@
       href="{{ url_for('static', filename='/css/nicepage.css') }}"
       media="screen"
     />
-    <style>
-      .u-section-1 {
-        background-image: url("{{ url_for('static', filename='img/a8ba609e-bd5e-1f39-d306-c5f6b7c33a73.png') }}");
-        background-position: 50% 50%;
-      }
-
-      .u-section-1 .u-sheet-1 {
-        min-height: 512px;
-      }
-
-      .u-section-1 .u-btn-1 {
-        --radius: 50px;
-        font-weight: 700;
-        text-transform: uppercase;
-        font-size: 0.875rem;
-        letter-spacing: 1px;
-        margin-bottom: 0;
-        background-image: none;
-        margin-top: 45px;
-        font-family: "Open Sans", sans-serif;
-      }
-
-      .u-section-1 .u-image-1 {
-        width: 373px;
-        height: 261px;
-        margin-top: 30px;
-        margin-bottom: 0;
-      }
-
-      .u-section-1 .u-text-1 {
-        font-size: 1.125rem;
-        font-family: "Open Sans", sans-serif;
-        margin: 20px auto 60px -15px;
-      }
-
-      @media (max-width: 1199px) {
-        .u-section-1 .u-sheet-1 {
-          min-height: 422px;
-        }
-      }
-
-      @media (max-width: 991px) {
-        .u-section-1 .u-sheet-1 {
-          min-height: 323px;
-        }
-      }
-
-      @media (max-width: 767px) {
-        .u-section-1 .u-sheet-1 {
-          min-height: 242px;
-        }
-
-        .u-section-1 .u-text-1 {
-          font-size: 1rem;
-        }
-      }
-
-      @media (max-width: 575px) {
-        .u-section-1 {
-          background-position: 50% 0.9%;
-          background-repeat: no-repeat;
-          background-size: cover;
-        }
-
-        .u-section-1 .u-sheet-1 {
-          min-height: 405px;
-        }
-
-        .u-section-1 .u-btn-1 {
-          font-family: gramatika_regular;
-          margin-top: -23px;
-          margin-left: auto;
-          margin-right: auto;
-        }
-
-        .u-section-1 .u-image-1 {
-          height: 182px;
-          width: 260px;
-          margin-top: 6px;
-          margin-left: auto;
-          margin-right: auto;
-        }
-
-        .u-section-1 .u-text-1 {
-          width: auto;
-          line-height: 1;
-          font-size: 0.625rem;
-          font-family: gramatika_regular;
-          margin-top: 5px;
-          margin-left: -1px;
-          margin-right: -1px;
-        }
-      }
-    </style>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='/css/css.css') }}"
+      media="screen"
+    />
     <script
       class="u-script"
       type="text/javascript"
@@ -150,10 +61,10 @@
   >
     <header class="u-clearfix u-custom-color-9 u-header u-header" id="sec-eb85">
       <div
-        class="u-clearfix u-sheet u-valign-middle-lg u-valign-middle-md u-valign-middle-sm u-valign-middle-xl u-sheet-1"
+        class="mainDiv"
       >
         <img
-          class="u-image u-image-default u-image-1"
+          class="mainImage"
           src="{{ url_for('static', filename='img/bold.png') }}"
           alt=""
           data-image-width="345"
@@ -163,28 +74,26 @@
     </header>
     <section class="u-clearfix u-image u-section-1" id="sec-8cdd">
       <div class="u-clearfix u-sheet u-sheet-1">
-        <a
-          href="/shop.html"
-          data-page-id="306308730"
-          class="u-border-none u-btn u-btn-round u-button-style u-custom-color-13 u-custom-font u-hover-custom-color-7 u-radius u-btn-1"
-          >Товары</a
-        >
+        
         <img
-          class="custom-expanded u-image u-image-default u-image-1"
+          class="secondImage"
           src="{{ url_for('static', filename='img/a8a864ca-e8c7-2054-a1ec-6425bf19cf06.png') }}"
           alt=""
           data-image-width="373"
           data-image-height="261"
           data-href="https://neimark-it.ru/"
         />
+        
         <p
-          class="u-align-center-xs u-custom-font u-text u-text-default u-text-white u-text-1"
+          class="description-text"
         >
           Участвуй в наших мероприятиях и получай награды! Это отличная
           возможность не только проявить свои навыки, но и получить призы за
           активность. Следи за анонсами, участвуй в конкурсах и не упусти шанс
           выиграть интересные подарки!
         </p>
+        <form class="ShopForm" action="./shop.html" target="">
+          <button class ="ButtonShopBox">Магазин</button></form>
       </div>
     </section>
 
