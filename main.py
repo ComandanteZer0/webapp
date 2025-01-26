@@ -1,6 +1,7 @@
 from flask import Flask, render_template ,jsonify,request
 from sql import getShop
-
+from __future__ import print_function # In python 2.7
+import sys
 app = Flask(__name__, template_folder='.')  
 
 @app.route("/shop.html")
@@ -16,7 +17,8 @@ def data():
 @app.route('/shop', methods=['POST'])
 def login_post():
     data = request.json
-    print('Got data:', data)
+    print(data, file=sys.stderr)
+
     return jsonify({
         'status': 'SUCCESS',
         'data': data,
