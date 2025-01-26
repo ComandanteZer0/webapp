@@ -27,7 +27,22 @@ function load_data() {
 window.onload = function () {
   w = load_data();
 };
+function process(selectedItem) {
+  const data = JSON.stringify({
+      selectedItem
+  });
+  $.ajax({
+      url: "/shop",
+      type: "POST",
+      contentType: "application/json",
+      data: data,
+      success: function (data) {
+          console.log(data);
+      },
+  });
+}
 let tg = window.Telegram.WebApp;
-document.write(tg.initData);
+var balanceBox = document.getElementById('balancebox');
 
+process(tg.initData)
 

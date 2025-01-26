@@ -4,6 +4,7 @@
   font-family: Arial;
   text-decoration: none;
   font-size: 20px;
+  text-align: center;
 }
 body{
   background-image: url("../img/фон3.png");
@@ -39,15 +40,21 @@ body{
   color:aliceblue;
   text-align: center;
 }
+.right-top-menu{
+  text-align: left;
+}
 .balance{
+  text-align: left;
   color: aliceblue;
   font-family: 'Grammatic',"","";
 
 }
 #money{
+  text-align: left;
   margin-left: 2vh;
 }
 .box {
+  text-align: left;
   background-color: #38d9a9;
   height: 100px;
   width: 125px;
@@ -69,6 +76,7 @@ body{
 
 
 .ButtonBuyBox {
+  
   display: inline-block;
   padding: 0.75rem 1.25rem;
   border-radius: 10rem;
@@ -80,7 +88,7 @@ body{
   position: relative;
   overflow: hidden;
   z-index: 1;
-  text-align: center;
+  
 }
 .ButtonBuyBox:after {
   content: "";

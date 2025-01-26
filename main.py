@@ -1,4 +1,4 @@
-from flask import Flask, render_template ,jsonify
+from flask import Flask, render_template ,jsonify,request
 from sql import getShop
 
 app = Flask(__name__, template_folder='.')  
@@ -13,6 +13,14 @@ def shop():
 def data():
     tov = list(getShop())
     return jsonify(tov)
+@app.route('/shop', methods=['POST'])
+def login_post():
+    data = request.json
+    print('Got data:', data)
+    return jsonify({
+        'status': 'SUCCESS',
+        'data': data,
+    })
 @app.route("/")  
 def web():    
     return render_template('assets/main/главная.html')
