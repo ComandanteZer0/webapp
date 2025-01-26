@@ -38,10 +38,10 @@ function load_data() {
 window.onload = function () {
   let w = load_data();
   let tg = window.Telegram.WebApp;
+  const userId = Telegram.WebApp.initDataUnsafe.userId;
   let replace = document.querySelector("#profileButton");
   var href = replace.getAttribute("href");
-  let user_id =tg.initDataUnsafe.user_id
-  replace.href = "./profile/" + user_id;
+  replace.href = "./profile/" + userId;
 };
 function process(selectedItem) {
   const data = JSON.stringify({
