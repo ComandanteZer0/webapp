@@ -39,11 +39,13 @@ function load_data() {
 window.onload = function () {
   let w = load_data();
 
-  const userId = window.Telegram.WebApp.initDataUnsafe.user.id;
+  var search = Telegram.WebApp.initData
+  var converted = JSON.parse('{"' + search.replace(/&/g, '","').replace(/=/g,'":"') + '"}', function(key, value) { return key===""?value:decodeURIComponent(value) })
+  JSON.parse(converted.user)
   let replace = document.querySelector("#profileButton");
   var href = replace.getAttribute("href");
-  console.log(userId);
-  replace.href =("./profile/" + userId); 
+  console.log(converted);
+  replace.href =("./profile/" + converted); 
 };
 function process(selectedItem) {
   const data = JSON.stringify({
