@@ -11,7 +11,7 @@ def shop():
 
 @app.route('/data')
 def data():
-    tov = list(getShop())#["5458909231878103296.jpg",'5458909231878103305.jpg','5458909231878103305.jpg','5458909231878103305.jpg']
+    tov = list(getShop())
     return jsonify(tov)
 @app.route("/")  
 def web():    

@@ -1,43 +1,20 @@
 <!DOCTYPE html>
-<html style="font-size: 16px" lang="ru">
+<html  lang="ru">
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta charset="utf-8" />
     <meta name="keywords" content="" />
     <meta name="description" content="" />
     <title>главная</title>
-
     <link
       rel="stylesheet"
       href="{{ url_for('static', filename='/css/css.css') }}"
       media="screen"
     />
-
-
-    <meta name="generator" content="Nicepage 7.2.3, nicepage.com" />
-
-    <link
-      id="u-theme-google-font"
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i"
-    />
-    <link
-      id="u-page-google-font"
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i"
-    />
-    <script type="application/ld+json">
-      {
-        "@context": "http://schema.org",
-        "@type": "Organization",
-        "name": ""
-      }
-    </script>
     <script src="{{ url_for('static', filename='/Scripts/mainScr.js') }}"></script>
     <meta name="theme-color" content="#478ac9" />
     <meta property="og:title" content="главная" />
     <meta property="og:type" content="website" />
-    <meta data-intl-tel-input-cdn-path="intlTelInput/" />
   </head>
   <body
     data-path-to-root="./"
@@ -46,9 +23,7 @@
     data-lang="ru"
   >
     <header class="u-clearfix u-custom-color-9 u-header u-header" id="sec-eb85">
-      <div
-        class="mainDiv"
-      >
+      <div class="mainDiv">
         <img
           class="mainImage"
           src="{{ url_for('static', filename='img/bold.png') }}"
@@ -60,7 +35,6 @@
     </header>
     <section class="u-clearfix u-image u-section-1" id="sec-8cdd">
       <div class="u-clearfix u-sheet u-sheet-1">
-        
         <img
           class="secondImage"
           src="{{ url_for('static', filename='img/a8a864ca-e8c7-2054-a1ec-6425bf19cf06.png') }}"
@@ -69,17 +43,16 @@
           data-image-height="261"
           data-href="https://neimark-it.ru/"
         />
-        
-        <p
-          class="description-text"
-        >
+
+        <p class="description-text">
           Участвуй в наших мероприятиях и получай награды! Это отличная
           возможность не только проявить свои навыки, но и получить призы за
           активность. Следи за анонсами, участвуй в конкурсах и не упусти шанс
           выиграть интересные подарки!
         </p>
         <form class="ShopForm" action="./shop.html" target="">
-          <button class ="ButtonShopBox">Магазин</button></form>
+          <button class="ButtonShopBox">Магазин</button>
+        </form>
       </div>
     </section>
 
