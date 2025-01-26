@@ -1,7 +1,7 @@
 from __future__ import print_function # In python 2.7
 from flask import Flask, render_template ,jsonify,request
 from sql import getShop,getUserData
-
+import logging
 import sys
 app = Flask(__name__, template_folder='.')  
 
@@ -11,6 +11,7 @@ def shop():
 @app.route('/profile/<username>')
 def show_user_profile(username):
   data = getUserData(username)
+  app.logger.warning(username)
   print(username, file=sys.stderr)
   return render_template('assets/profile/profile.html',user_id=data[0],balance=data[2],name=data[6])
 
