@@ -1,6 +1,5 @@
 url = 'WebApp.html'
 sqlDns = 'amvera-goshasn-cnpg-webapp-rw'
-sqlUs = 'bot'
-sqlPass = 'bot37164716'
+botToken = ''
 name = "bd.db"
 main_link = "https://miniapp-goshasn.amvera.io/"

@@ -1,7 +1,6 @@
 import sqlite3
 import asyncio
-import json
-
+import config
 class Database:
 	def __init__(self, db_name):
 		self.connection = sqlite3.connect(db_name)
@@ -17,4 +16,13 @@ class Database:
 	def get_users(self):
 		with self.connection:
 			return self.cursor.execute('SELECT user_id FROM "user_data"').fetchall()
+
+
+def getShop():
+	connection = sqlite3.connect(config.name)
+	cursor = connection.cursor()
+	with connection:
+		resp = cursor.execute('SELECT * FROM "shop_data"').fetchall()
+		cursor.close()
+		return resp
 		

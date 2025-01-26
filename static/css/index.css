@@ -1,4 +1,93 @@
+.ButtonBuyBox {
+  display: inline-block;
+  padding: 0.75rem 1.25rem;
+  border-radius: 10rem;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 1rem;
+  letter-spacing: 0.15rem;
+  transition: all 0.3s;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  text-align: center;
+}
+.ButtonBuyBox:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #0cf;
+  border-radius: 10rem;
+  z-index: -2;
+}
+.ButtonBuyBox:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background-color: #008fb3;
+  transition: all 0.3s;
+  border-radius: 10rem;
+  z-index: -1;
+}
+.ButtonBuyBox:hover {
+  color: #fff;
+}
+.ButtonBuyBox:hover:before {
+  width: 100%;
+}
 
+/* optional reset for presentation */
+* {
+  font-family: Arial;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+
+.menu {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  size : 40%;
+  
+}
+@font-face {
+  font-family: "Grammatic";
+  src :url("../fonts/gramatika_regular.ttf");
+  font-size: 12vh;
+  /* src: "{{ url_for('static', filename='/fonts/gramatika_bold.ttf') }}"; */
+}
+.ButtonBuyBox{
+
+}
+.ImgTextBoxes{
+  font-size: 12vh;
+  font-family: 'Grammatic',"","";
+  color: '1D1D1B';
+  text-align: center;
+  
+  
+}
+.plinkImages{
+  background-color: lightgrey;
+}
+.menu div img {
+  max-width: 100%;
+  display: block;
+}
+
+.menu div{
+  background-color: "#1D1D1B";
+  display: inline-block;
+  border: 10px solid lightgray;
+  size: 10%
+}
 .u-section-1 .u-sheet-1 {
   min-height: 1925px;
 }
@@ -17,7 +106,7 @@
   margin: 360px auto 0 63px;
 }
 
-.u-section-1 .u-image-3 {
+.u -section-1 .u-image-3 {
   width: 300px;
   height: 300px;
   margin: 535px auto 0 178px;

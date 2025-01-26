@@ -6,7 +6,7 @@ import asyncio
 from sql import Database
 import os
 import config
-bot = Bot(token='8118444300:AAFwpBXmS1Rwn7sEqBSS92C86TYEchTGtAs', parse_mode=types.ParseMode.HTML)
+bot = Bot(token=config.botToken, parse_mode=types.ParseMode.HTML)
 storage = MemoryStorage()
 dp = Dispatcher(bot, storage=storage)
 db = Database("bd.db")
@@ -25,7 +25,7 @@ async def bot_start(message: types.Message):
                                 ])
         await bot.send_message(message.from_user.id, 
             f'Привет! Я бот для продажи мерча кампуса НЕЙМАРКА. Здесь вы можете найти уникальные товары, связанные с нашим брендом, включая одежду, аксессуары и сувениры.\n'
-            F'Запусти меня, чтобы увидеть весь ассортимент!', 
+            f'Запусти меня, чтобы увидеть весь ассортимент!',  
         reply_markup=ikb_donate)
 async def set_default_commands(dp):
     await dp.bot.set_my_commands(
