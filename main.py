@@ -10,8 +10,9 @@ def shop():
    return render_template('assets/shop/shop.html')
 @app.route('/profile/<username>')
 def show_user_profile(username):
-  data = getUserData(username)
   app.logger.warning(username)
+  data = getUserData(username)
+  
   print(username, file=sys.stderr)
   return render_template('assets/profile/profile.html',user_id=data[0],balance=data[2],name=data[6])
 
