@@ -35,16 +35,14 @@ function load_data() {
     })
     .catch((error) => console.error("Error:", error));
 }
-const tg = window.Telegram.WebApp.ready();
-const sr = Telegram.WebApp.initDataUnsafe.userId;
-console.log(sr)
+
 window.onload = function () {
   let w = load_data();
 
-  const userId = tg.initData;
+  const userId = window.Telegram.WebApp.initDataUnsafe.user.id;
   let replace = document.querySelector("#profileButton");
   var href = replace.getAttribute("href");
-  console.log(userId)
+  console.log(userId);
   replace.href =("./profile/" + userId); 
 };
 function process(selectedItem) {
