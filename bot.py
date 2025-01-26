@@ -24,7 +24,8 @@ async def bot_start(message: types.Message):
                                     ]
                                 ])
         await bot.send_message(message.from_user.id, 
-            f'Start message', 
+            f'Привет! Я бот для продажи мерча кампуса НЕЙМАРКА. Здесь вы можете найти уникальные товары, связанные с нашим брендом, включая одежду, аксессуары и сувениры.
+Запусти меня, чтобы увидеть весь ассортимент!', 
         reply_markup=ikb_donate)
 async def set_default_commands(dp):
     await dp.bot.set_my_commands(
