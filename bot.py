@@ -11,6 +11,7 @@ storage = MemoryStorage()
 dp = Dispatcher(bot, storage=storage)
 db = Database("bd.db")
 from aiogram.types import InlineKeyboardButton,InlineKeyboardMarkup, WebAppInfo,BotCommand
+
 def webAppKeyboardInline(): 
    keyboard = InlineKeyboardMarkup(row_width=1)
    webApp = WebAppInfo(url = config.main_link) 
@@ -18,6 +19,13 @@ def webAppKeyboardInline():
    keyboard.add(one) 
    
    return keyboard 
+
+@dp.message_handler(lambda message: message.web_app_data)
+async def answer(message):
+   print(message) 
+   print(message.web_app_data.data) 
+   await bot.send_message(message.chat.id, f"получили инофрмацию из веб-приложения: {message.web_app_data.data}") 
+   
 @dp.message_handler(commands=['start','open'])
 async def bot_start(message: types.Message):
     if message.chat.type == 'private':
@@ -60,12 +68,7 @@ async def Status_change(call: types.CallbackQuery):
     
     await bot.send_message(call.message.chat.id, config.helloText, 
                     reply_markup = webAppKeyboardInline())
-@dp.message_handler(content_types="web_app_data") 
-async def answer(webAppMes):
-   print(webAppMes) 
-   print(webAppMes.web_app_data.data) 
-   await bot.send_message(webAppMes.chat.id, f"получили инофрмацию из веб-приложения: {webAppMes.web_app_data.data}") 
-   
+
 if __name__ == '__main__':
     loop = asyncio.new_event_loop()
     asyncio.set_event_loop(loop)

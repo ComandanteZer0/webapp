@@ -59,7 +59,7 @@ function process(selectedItem) {
   });
 }
 let tg = window.Telegram.WebApp; //получаем объект webapp телеграма
-
+tg.sendData("some string that we need to send");
 tg.expand(); //расширяем на все окно
 
 tg.MainButton.text = "Changed Text"; //изменяем текст кнопки
@@ -68,7 +68,7 @@ tg.MainButton.textColor = "#F55353"; //изменяем цвет текста к
 tg.MainButton.color = "#143F6B"; //изменяем цвет бэкграунда кнопки
 tg.MainButton.setParams({ color: "#143F6B" }); //так изменяются все параметры
 
-tg.sendData("some string that we need to send");
+
 
 let profName = document.createElement("p"); 
 profName.innerText = `${tg.initDataUnsafe.user.first_name}

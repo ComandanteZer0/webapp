@@ -80,3 +80,7 @@ body{
   .ButtonShopBox:hover:before {
     width: 100%;
   }
+.discription_lowest{
+  color: aliceblue;
+  font-family: "Grammatic-regular","","";
+}
